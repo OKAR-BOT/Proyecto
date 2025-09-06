@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro al Curso de IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .registro-container {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            background: transparent;
+        }
+        .form-box {
+            background: #fff;
+            border-radius: 32px;
+            box-shadow: 0 4px 24px rgba(25, 118, 210, 0.12);
+            padding: 36px 32px;
+            min-width: 320px;
+            max-width: 340px;
+        }
+        .form-box h2 {
+            color: #1976d2;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 1.5em;
+        }
+        .form-box input[type="text"],
+        .form-box input[type="email"] {
+            width: 100%;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #f4f6fb;
+            font-size: 1em;
+        }
+        .form-box label {
+            display: block;
+            margin-bottom: 6px;
+            color: #1976d2;
+            font-weight: 500;
+        }
+        .sexo-group {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 18px;
+        }
+        .sexo-group label {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .form-box button {
+            width: 100%;
+            background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .form-box button:hover {
+            background: #1565c0;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #1976d2 60%, #42a5f5 100%);
+            color: #fff;
+            border-radius: 40px;
+            padding: 48px 36px;
+            font-size: 1.5em;
+            font-weight: 600;
+            min-width: 320px;
+            max-width: 340px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(25, 118, 210, 0.12);
+        }
+        @media (max-width: 900px) {
+            .registro-container {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .form-box, .info-box {
+                min-width: 260px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="registro-container">
+        <form class="form-box">
+            <h2>Datos Personales</h2>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <label for="celular">Número celular</label>
+            <input type="text" id="celular" name="celular" placeholder="Número celular" required>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+            <label>Sexo</label>
+            <div class="sexo-group">
+                <label>
+                    <input type="radio" name="sexo" value="masculino" required>
+                    👨
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="femenino">
+                    👩
+                </label>
+            </div>
+            <button type="submit">Enviar datos</button>
+        </form>
+        <div class="info-box">
+            Hola,<br>quiero más<br>información
+        </div>
+    </div>
+</body>
+</html>

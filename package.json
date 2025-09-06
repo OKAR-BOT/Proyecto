@@ -1,0 +1,23 @@
+{
+  "name": "ai-course-landing-page",
+  "version": "1.0.0",
+  "description": "A landing page for promoting an AI course and providing information about artificial intelligence.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'"
+  },
+  "keywords": [
+    "AI",
+    "artificial intelligence",
+    "course",
+    "education",
+    "landing page"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
