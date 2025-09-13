@@ -1,15 +1,48 @@
 
 import './App.css';
-import Header  from './Header.jsx';
-import { Info } from './Header.jsx';
+import React, { useState } from 'react';
+import NavBar from './components/NavBar.jsx';
+import  Info  from './components/Info.jsx';
+import ContentInicio from './ContentInicio.jsx';
 function App() {
 
+  const [activeSection, setActiveSection] = useState('Inicio');
+  
+  let Content;
+
+  
+    let section = activeSection;
+    console.log('Seccion activa:', section);
+
+    switch (section) {
+      case 'Inicio':
+        Content=<ContentInicio></ContentInicio>
+        break;
+      case 'Beneficios':
+        // Renderizar componente de Beneficios
+        break;
+      case 'Nosotros':
+        // Renderizar componente de Nosotros
+        break;
+      case 'Tipos':
+        // Renderizar componente de Tipos de IA
+        break;
+      default:
+        break;
+
+  };
+
   return (
-    <div className='flex h-40 items-center'>
-      <img src="/Images/logo.png" alt='Logo' className='ml-10 w-20 h-20'></img>
-      <Header />
+    <>
+    <header className=' w-full flex flex-col h-80 items-center md:flex-row md:h-40 md:justify-between'>
+      <img src="/Images/logo.png" alt='Logo' className='w-20 h-20 mb-4 md:mb-0 md:ml-10'></img>
+      <NavBar activeSection={activeSection} onSectionChange={setActiveSection}/> 
       <Info />
-    </div>
+    </header>
+    <main className='w-full h-auto'>
+      {Content}
+    </main>
+    </>
   );
 }
 

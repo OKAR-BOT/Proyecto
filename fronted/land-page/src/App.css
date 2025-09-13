@@ -1,11 +1,9 @@
-.Header{
+.navBar{
   background: linear-gradient(180deg, #0E48DF 0%, #39C6F4 100%);
   width: 100%;
 
 }
-ul{
-  width: 100%;
-}
+
 
 .btn-info{
   background: linear-gradient(180deg, #0E48DF 0%, #39C6F4 100%);
