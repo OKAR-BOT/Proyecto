@@ -2,8 +2,7 @@ FIGMA
 https://www.figma.com/design/ldySaxON86a8jVVOOtXoFH/Untitled?node-id=9-34&m=dev&t=t79mtv6zL3yR1kFU-1
 
 
-SCRIPT PARA LA CREACIÓN DE LA BASE DE DATOS
--- Base de datos: `ia_solutions_db`
+SCRIPT PARA LA CREACIÓN DE LA BASE DE DATOS `ia_solutions_db`
 
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
