@@ -5,6 +5,7 @@ import ContentInicio from "./ContentInicio.jsx";
 import FormularioContacto from "./components/FormularioContacto.jsx";
 import BeneficiosIA from "./components/BeneficiosIA/BeneficiosIA.jsx";
 import TiposIA from "./components/TiposIA/TiposIA.jsx";
+import Nosotros from "./components/Nosotros/Nosotros.jsx";
 
 function App() {
   const [activeSection, setActiveSection] = useState("Inicio");
@@ -22,7 +23,7 @@ function App() {
       Content = <BeneficiosIA />;
       break;
     case "Nosotros":
-      // Renderizar componente de Nosotros
+      Content = <Nosotros />;
       break;
     case "Tipos":
       Content = <TiposIA />;
