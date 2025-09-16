@@ -1,0 +1,77 @@
+.tipos-section {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.tipos-content {
+  max-width: 900px;
+  text-align: center;
+  color: #333;
+}
+
+.tipos-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.tipos-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.tipos-list {
+  text-align: left;
+  margin-bottom: 40px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.tipos-list li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.tipos-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tipo-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tipo-btn:hover {
+  background-color: #0d47a1;
+}
+
+.tipos-img {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
