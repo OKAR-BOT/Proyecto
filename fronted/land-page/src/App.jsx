@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import NavBar from "./components/NavBar.jsx";
 import ContentInicio from "./ContentInicio.jsx";
 import FormularioContacto from "./components/FormularioContacto.jsx";
+import BeneficiosIA from "./components/BeneficiosIA/BeneficiosIA.jsx";
+
 function App() {
   const [activeSection, setActiveSection] = useState("Inicio");
 
@@ -16,7 +18,7 @@ function App() {
       Content = <ContentInicio></ContentInicio>;
       break;
     case "Beneficios":
-      // Renderizar componente de Beneficios
+      Content = <BeneficiosIA />;
       break;
     case "Nosotros":
       // Renderizar componente de Nosotros
