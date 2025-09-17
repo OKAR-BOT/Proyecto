@@ -1,0 +1,65 @@
+.nosotros-section {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.nosotros-content {
+  max-width: 900px;
+  text-align: center;
+  color: #333;
+}
+
+.nosotros-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.nosotros-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.nosotros-valores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.valor-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.valor-btn:hover {
+  background-color: #0d47a1;
+}
+
+.nosotros-img {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
