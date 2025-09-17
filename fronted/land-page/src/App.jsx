@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar.jsx";
 import ContentInicio from "./ContentInicio.jsx";
 import FormularioContacto from "./components/FormularioContacto.jsx";
 import BeneficiosIA from "./components/BeneficiosIA/BeneficiosIA.jsx";
+import TiposIA from "./components/TiposIA/TiposIA.jsx";
 
 function App() {
   const [activeSection, setActiveSection] = useState("Inicio");
@@ -24,7 +25,7 @@ function App() {
       // Renderizar componente de Nosotros
       break;
     case "Tipos":
-      // Renderizar componente de Tipos de IA
+      Content = <TiposIA />;
       break;
     case "MasInforamcion":
       Content = (
