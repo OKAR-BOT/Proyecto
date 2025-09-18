@@ -1,28 +1,36 @@
-package com.utp.demo.model;
+package com.utp.demo.Model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "contactos")
 public class Contacto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @Id 
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "apellido")
     private String apellido;
+    @Column(name= "correo")
     private String correo;
+    @Column(name = "celular")
     private String celular;
+    @Column(name = "consentimiento")
     private Boolean consentimiento;
 
-    public Long getId() {
+    //getters y setters
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -66,4 +74,3 @@ public class Contacto {
         this.consentimiento = consentimiento;
     }
 }
-

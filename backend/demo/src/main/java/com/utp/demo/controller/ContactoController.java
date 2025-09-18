@@ -1,9 +1,15 @@
-package com.utp.demo.controller;
+package com.utp.demo.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import com.utp.demo.model.Contacto;
-import com.utp.demo.repository.ContactoRepository;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.utp.demo.Model.Contacto;
+import com.utp.demo.Service.ContactoService;
 
 @RestController
 @RequestMapping("/api/contactos")
@@ -11,11 +17,11 @@ import com.utp.demo.repository.ContactoRepository;
 public class ContactoController {
 
     @Autowired
-    private ContactoRepository contactoRepository;
+    private ContactoService contactoService;
 
     @PostMapping
-    public Contacto guardar(@RequestBody Contacto contacto) {
-        return contactoRepository.save(contacto);
-    }
+    public ResponseEntity<Contacto> crearContacto(@RequestBody Contacto contacto) {
+    Contacto contactoGuardado = contactoService.guardar(contacto);
+    return ResponseEntity.ok(contactoGuardado);
 }
-
+}
